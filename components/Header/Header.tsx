@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { Burger, Container, Group } from "@mantine/core";
+import { Burger, Group } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./Header.module.css";
+import { ActionToggle } from "../ActionToggle/ActionToggle";
 
 const links = [
   { link: "#about", label: "About" },
@@ -14,18 +14,13 @@ const links = [
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
     <a
       key={link.label}
       href={link.link}
       className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
+      onClick={(event) => event.preventDefault()}
     >
       {link.label}
     </a>
@@ -33,14 +28,19 @@ export function Header() {
 
   return (
     <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
-        <MantineLogo size={28} />
-        <Group gap={5} visibleFrom="xs">
-          {items}
+      <div className={classes.inner}>
+        <Group>
+          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          <MantineLogo size={28} />
         </Group>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      </Container>
+        <Group>
+          <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
+            {items}
+            <ActionToggle />
+          </Group>
+        </Group>
+      </div>
     </header>
   );
 }
