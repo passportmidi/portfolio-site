@@ -1,6 +1,6 @@
 "use client";
 
-import { Burger, Group } from "@mantine/core";
+import { Burger, Group, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./Header.module.css";
@@ -34,11 +34,15 @@ export function Header() {
           <MantineLogo size={28} />
         </Group>
 
+        <Drawer opened={opened} onClose={toggle} title="Menu">
+          {items}
+        </Drawer>
+
         <Group>
           <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
             {items}
-            <ActionToggle />
           </Group>
+          <ActionToggle />
         </Group>
       </div>
     </header>
