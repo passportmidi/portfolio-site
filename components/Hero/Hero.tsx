@@ -10,8 +10,8 @@ export function Hero() {
         <div className={classes.content}>
           <Title className={classes.title}>Hello world!</Title>
           <Text c="dimmed" mt="md">
-            This is a placeholder, I'm working on a portfolio website that I'll
-            upload here soon. For now you can check out my blog at{" "}
+            This is a placeholder, I&apos;m working on a portfolio website that
+            I&apos;ll upload here soon. For now you can check out my blog at{" "}
             <a href="https://blog.putnam.computer/">this link</a>.
           </Text>
 
@@ -21,7 +21,11 @@ export function Hero() {
             </Button>
           </Group>
         </div>
-        <Image src={image.src} className={classes.image} />
+        <Image
+          src={image.src}
+          className={classes.image}
+          alt="Placeholder image"
+        />
       </div>
     </Container>
   );
