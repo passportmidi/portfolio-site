@@ -1,7 +1,8 @@
 "use client";
 
-import { createTheme } from "@mantine/core";
+import { createTheme, colorsTuple } from "@mantine/core";
 
 export const theme = createTheme({
-  /* Put your mantine theme override here */
+  primaryColor: "teal",
+  headings: { fontFamily: "Monaco, Consolas, Lucida Console, monospace" },
 });

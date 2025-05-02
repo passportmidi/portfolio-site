@@ -1,4 +1,3 @@
-import { IconCheck } from "@tabler/icons-react";
 import { Button, Container, Group, Image, Text, Title } from "@mantine/core";
 import image from "../../public/favicon.svg";
 import classes from "./Hero.module.css";
@@ -16,7 +15,7 @@ export function Hero() {
           </Text>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
+            <Button radius="md" size="md" className={classes.control}>
               Placeholder button
             </Button>
           </Group>
