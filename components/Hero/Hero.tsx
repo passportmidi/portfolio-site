@@ -25,6 +25,7 @@ export function Hero() {
           src={image.src}
           className={classes.image}
           alt="Placeholder image"
+          mb="md"
         />
       </div>
     </Container>
