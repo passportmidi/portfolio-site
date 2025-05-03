@@ -23,39 +23,13 @@ const mockdata = [
     description:
       "An application that allows bakers to convert between cups and grams quickly and easily when measuring ingredients.",
     badges: [
-      { emoji: "☀️", label: "Sunny weather" },
-      { emoji: "🦓", label: "Onsite zoo" },
-      { emoji: "🌊", label: "Sea" },
-      { emoji: "🌲", label: "Nature" },
-      { emoji: "🤽", label: "Water sports" },
-    ],
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-    title: "Verudela Beach 2",
-    description:
-      "Completely renovated for the season 2020, Arena Verudela Bech Apartments are fully equipped and modernly furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.",
-    badges: [
-      { emoji: "☀️", label: "Sunny weather" },
-      { emoji: "🦓", label: "Onsite zoo" },
-      { emoji: "🌊", label: "Sea" },
-      { emoji: "🌲", label: "Nature" },
-      { emoji: "🤽", label: "Water sports" },
-    ],
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-    title: "Verudela Beach 3",
-    description:
-      "Completely renovated for the season 2020, Arena Verudela Bech Apartments are fully equipped and modernly furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.",
-    badges: [
-      { emoji: "☀️", label: "Sunny weather" },
-      { emoji: "🦓", label: "Onsite zoo" },
-      { emoji: "🌊", label: "Sea" },
-      { emoji: "🌲", label: "Nature" },
-      { emoji: "🤽", label: "Water sports" },
+      "React",
+      "Node.js",
+      "MySQL",
+      "Express",
+      "Axios",
+      "Fraction.js",
+      "Knex",
     ],
   },
 ];
@@ -92,8 +66,8 @@ export function Projects() {
         </Text>
         <Group gap={7} mt={5}>
           {project.badges.map((badge) => (
-            <Badge variant="light" key={badge.label} leftSection={badge.emoji}>
-              {badge.label}
+            <Badge variant="light" key={badge} className={classes.badge}>
+              {badge}
             </Badge>
           ))}
         </Group>
