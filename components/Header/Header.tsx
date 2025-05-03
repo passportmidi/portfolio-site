@@ -1,8 +1,7 @@
 "use client";
 
-import { Burger, Group, Drawer } from "@mantine/core";
+import { Title, Burger, Group, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./Header.module.css";
 import { ActionToggle } from "../ActionToggle/ActionToggle";
 
@@ -26,7 +25,9 @@ export function Header() {
       <div className={classes.inner}>
         <Group>
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-          <MantineLogo size={28} />
+          <Title component="p" order={4}>
+            Sydney Putnam
+          </Title>
         </Group>
 
         <Drawer opened={opened} onClose={toggle} title="Menu">

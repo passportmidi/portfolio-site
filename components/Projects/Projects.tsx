@@ -1,6 +1,6 @@
 "use client";
 
-import { IconCode } from "@tabler/icons-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 import {
   Badge,
   Button,
@@ -83,10 +83,10 @@ export function Projects() {
       <Group mt="xs">
         <Button
           radius="md"
-          leftSection={<IconCode size={18} stroke={1.5} />}
+          rightSection={<IconBrandGithub size={18} />}
           style={{ flex: 1 }}
         >
-          View source code
+          View on GitHub
         </Button>
       </Group>
     </Card>
