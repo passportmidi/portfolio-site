@@ -4,6 +4,7 @@ import { Title, Burger, Group, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
 import { ActionToggle } from "../ActionToggle/ActionToggle";
+import Link from "next/link";
 
 const links = [
   { link: "#about", label: "About" },
@@ -15,9 +16,9 @@ export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
 
   const items = links.map((link) => (
-    <a key={link.label} href={link.link} className={classes.link}>
+    <Link key={link.label} href={link.link} className={classes.link}>
       {link.label}
-    </a>
+    </Link>
   ));
 
   return (

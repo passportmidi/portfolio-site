@@ -1,23 +1,30 @@
+"use client";
+
 import { Button, Container, Group, Image, Text, Title } from "@mantine/core";
 import NextImage from "next/image";
+import { useRouter } from "next/navigation";
 import icon from "../../public/favicon.svg";
 import classes from "./Hero.module.css";
 
 export function Hero() {
+  const router = useRouter();
   return (
     <Container size="md">
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>Hello world!</Title>
+          <Title className={classes.title}>Hi! I'm Sydney 🧑‍💻</Title>
           <Text c="dimmed" mt="md">
-            This is a placeholder, I&apos;m working on a portfolio website that
-            I&apos;ll upload here soon. For now you can check out my blog at{" "}
-            <a href="https://blog.putnam.computer/">this link</a>.
+            A Software Developer based in Halifax, Canada
           </Text>
 
           <Group mt={30}>
-            <Button radius="md" size="md" className={classes.control}>
-              Placeholder button
+            <Button
+              radius="md"
+              size="md"
+              className={classes.control}
+              onClick={() => router.push("/Resume_SydneyPutnam.pdf")}
+            >
+              Download CV
             </Button>
           </Group>
         </div>
