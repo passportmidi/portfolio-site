@@ -53,3 +53,11 @@
 .badge {
   text-transform: none;
 }
+
+.image {
+  object-position: top center;
+  height: 180px;
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: 260px;
+  }
+}

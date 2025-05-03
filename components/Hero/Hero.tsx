@@ -1,5 +1,6 @@
 import { Button, Container, Group, Image, Text, Title } from "@mantine/core";
-import image from "../../public/favicon.svg";
+import NextImage from "next/image";
+import icon from "../../public/favicon.svg";
 import classes from "./Hero.module.css";
 
 export function Hero() {
@@ -21,9 +22,12 @@ export function Hero() {
           </Group>
         </div>
         <Image
-          src={image.src}
+          component={NextImage}
+          src={icon.src}
           className={classes.image}
           alt="Placeholder image"
+          width={100}
+          height={100}
           mb="md"
         />
       </div>

@@ -13,12 +13,12 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import NextImage from "next/image";
 import classes from "./Projects.module.css";
 
 const mockdata = [
   {
-    image:
-      "https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
+    image: "/wizard.png",
     title: "RecipeWizard",
     description:
       "An application that allows bakers to convert between cups and grams quickly and easily when measuring ingredients.",
@@ -46,7 +46,14 @@ export function Projects() {
       className={classes.card}
     >
       <Card.Section>
-        <Image src={project.image} alt={project.title} height={180} />
+        <Image
+          component={NextImage}
+          src={project.image}
+          alt={project.title}
+          height={863}
+          width={757}
+          className={classes.image}
+        />
       </Card.Section>
 
       <Card.Section className={classes.section} mt="md">
