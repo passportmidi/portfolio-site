@@ -15,13 +15,15 @@ import {
 } from "@mantine/core";
 import NextImage from "next/image";
 import classes from "./Projects.module.css";
+import { useRouter } from "next/navigation";
 
-const mockdata = [
+const data = [
   {
     image: "/wizard.png",
     title: "RecipeWizard",
     description:
       "An application that allows bakers to convert between cups and grams quickly and easily when measuring ingredients.",
+    link: "https://github.com/passportmidi/capstone-project-frontend",
     badges: [
       "React",
       "Node.js",
@@ -36,8 +38,9 @@ const mockdata = [
 
 export function Projects() {
   const theme = useMantineTheme();
+  const router = useRouter();
 
-  const projects = mockdata.map((project) => (
+  const projects = data.map((project) => (
     <Card
       key={project.title}
       withBorder
@@ -85,6 +88,7 @@ export function Projects() {
           radius="md"
           rightSection={<IconBrandGithub size={18} />}
           style={{ flex: 1 }}
+          onClick={() => router.push(`${project.link}`)}
         >
           View on GitHub
         </Button>
