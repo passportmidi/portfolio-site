@@ -1,9 +1,7 @@
 "use client";
 
-import { Button, Container, Group, Image, Text, Title } from "@mantine/core";
-import NextImage from "next/image";
+import { Button, Container, Group, Text, Title, Avatar } from "@mantine/core";
 import { useRouter } from "next/navigation";
-import icon from "../../public/favicon.svg";
 import classes from "./Hero.module.css";
 
 export function Hero() {
@@ -28,14 +26,10 @@ export function Hero() {
             </Button>
           </Group>
         </div>
-        <Image
-          component={NextImage}
-          src={icon.src}
+        <Avatar
+          src="https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6"
           className={classes.image}
-          alt="Placeholder image"
-          width={100}
-          height={100}
-          mb="md"
+          alt="Placeholder photo of keyboard"
         />
       </div>
     </Container>

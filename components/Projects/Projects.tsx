@@ -86,7 +86,7 @@ export function Projects() {
       <Group mt="xs">
         <Button
           radius="md"
-          rightSection={<IconBrandGithub size={18} />}
+          rightSection={<IconBrandGithub size={18} stroke={1.5} />}
           style={{ flex: 1 }}
           onClick={() => router.push(`${project.link}`)}
         >
