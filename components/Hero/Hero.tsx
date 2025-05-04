@@ -11,9 +11,7 @@ export function Hero() {
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>Hi! I'm Sydney 🧑‍💻</Title>
-          <Text c="dimmed" mt="md">
-            A Software Developer based in Halifax, Canada
-          </Text>
+          <Text mt="md">A Software Developer based in Halifax, Canada</Text>
 
           <Group mt={30}>
             <Button
