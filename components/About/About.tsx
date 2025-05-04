@@ -2,7 +2,7 @@ import { Container, Title, Text } from "@mantine/core";
 
 export function About() {
   return (
-    <Container size="md" id="about">
+    <Container size="md" py="xl" id="about">
       <Title>About</Title>
       <Text pt="md">
         My childhood interest in computers led me to a Bachelor of Computer
