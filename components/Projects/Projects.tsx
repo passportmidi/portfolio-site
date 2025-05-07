@@ -98,7 +98,7 @@ export function Projects() {
 
   return (
     <Container id="projects" size="lg" py="xl">
-      <Title order={2} className={classes.title} ta="center">
+      <Title className={classes.title} ta="center">
         Projects
       </Title>
 

@@ -25,10 +25,11 @@ export function Hero() {
           </Group>
         </div>
         <Image
-          src="https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6"
+          src="https://avatars.githubusercontent.com/u/69093420?v=4"
           className={classes.image}
-          alt="Placeholder photo of keyboard"
+          alt="Placeholder photo"
           radius="lg"
+          mb="xl"
         />
       </div>
     </Container>

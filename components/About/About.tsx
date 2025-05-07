@@ -43,10 +43,10 @@ const data = [
 
 const skills = data.map((section) => (
   <>
-    <Title order={3} pt="md">
+    <Title order={3} pt="md" key={section.title}>
       {section.title}
     </Title>
-    <Group gap={7} mt={5} pb="md">
+    <Group gap={7} mt={5} pb="md" key={section.title + " Group"}>
       {section.badges.map((badge) => (
         <Badge variant="light" key={badge} className={classes.badge}>
           {badge}
