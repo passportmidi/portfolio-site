@@ -2,6 +2,7 @@
 
 import { Container, Title, Text, Grid, Badge, Group } from "@mantine/core";
 import classes from "./About.module.css";
+import { Fragment } from "react";
 
 const data = [
   {
@@ -42,18 +43,18 @@ const data = [
 ];
 
 const skills = data.map((section) => (
-  <>
-    <Title order={3} pt="md" key={section.title}>
+  <Fragment key={section.title}>
+    <Title order={3} pt="md">
       {section.title}
     </Title>
-    <Group gap={7} mt={5} pb="md" key={section.title + " Group"}>
+    <Group gap={7} mt={5} pb="md">
       {section.badges.map((badge) => (
         <Badge variant="light" key={badge} className={classes.badge}>
           {badge}
         </Badge>
       ))}
     </Group>
-  </>
+  </Fragment>
 ));
 
 export function About() {

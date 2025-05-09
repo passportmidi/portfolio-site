@@ -13,6 +13,7 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import { CardGrid } from "../CardGrid/CardGrid";
 import NextImage from "next/image";
 import classes from "./Projects.module.css";
 import { useRouter } from "next/navigation";
@@ -61,11 +62,11 @@ export function Projects() {
 
       <Card.Section className={classes.section} mt="md">
         <Group justify="apart">
-          <Text fz="lg" fw={500}>
+          <Text fz="lg" fw={500} ff="heading">
             {project.title}
           </Text>
         </Group>
-        <Text fz="sm" mt="xs">
+        <Text fz="sm" mt="xs" c="dimmed">
           {project.description}
         </Text>
       </Card.Section>
@@ -97,14 +98,8 @@ export function Projects() {
   ));
 
   return (
-    <Container id="projects" size="lg" py="xl">
-      <Title className={classes.title} ta="center">
-        Projects
-      </Title>
-
-      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
-        {projects}
-      </SimpleGrid>
-    </Container>
+    <CardGrid containerId="projects" title="Projects">
+      {projects}
+    </CardGrid>
   );
 }
