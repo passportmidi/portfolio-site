@@ -1,6 +1,9 @@
 .card {
   position: relative;
   background-color: var(--mantine-color-body);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .rating {
