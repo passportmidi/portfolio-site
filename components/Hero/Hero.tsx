@@ -10,7 +10,7 @@ export function Hero() {
     <Container size="md">
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>Hi! I'm Sydney 🧑‍💻</Title>
+          <Title className={classes.title}>Hi! I'm Sydney 💾</Title>
           <Text mt="md">A Software Developer based in Halifax, Canada</Text>
 
           <Group mt={30}>
@@ -25,7 +25,7 @@ export function Hero() {
           </Group>
         </div>
         <Image
-          src="https://avatars.githubusercontent.com/u/69093420?v=4"
+          src="/icon.png"
           className={classes.image}
           alt="Placeholder photo"
           radius="lg"

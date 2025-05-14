@@ -9,7 +9,8 @@ import Link from "next/link";
 const links = [
   { link: "#about", label: "About" },
   { link: "#projects", label: "Projects" },
-  { link: "mailto:sydney.putnam@proton.me", label: "Contact" },
+  { link: "#blog", label: "Blog" },
+  { link: "#contact", label: "Contact" },
 ];
 
 export function Header() {
