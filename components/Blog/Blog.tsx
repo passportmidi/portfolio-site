@@ -26,7 +26,7 @@ export function Blog() {
   const router = useRouter();
   const parser = new Parser();
 
-  const [articles, setArticles] = useState(null);
+  const [articles, setArticles] = useState<any>(null);
 
   useEffect(() => {
     const loadArticles = async () => {

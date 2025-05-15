@@ -41,7 +41,13 @@ export function GetInTouch() {
       <Paper shadow="md" radius="lg">
         <div className={classes.wrapper}>
           <div className={classes.contacts}>
-            <Text fz="lg" fw={700} className={classes.title} c="#fff">
+            <Text
+              fz="lg"
+              fw={700}
+              className={classes.title}
+              c="#fff"
+              ff="heading"
+            >
               Contact information
             </Text>
 
@@ -50,10 +56,9 @@ export function GetInTouch() {
 
           <form
             className={classes.form}
-            // onSubmit={(event) => event.preventDefault()}
             onSubmit={form.onSubmit((values: FormData) => sendEmail(values))}
           >
-            <Text fz="lg" fw={700} className={classes.title}>
+            <Text fz="lg" fw={700} className={classes.title} ff="heading">
               Get in touch
             </Text>
 
@@ -84,7 +89,7 @@ export function GetInTouch() {
               <Textarea
                 mt="md"
                 label="Your message"
-                placeholder="Please include all relevant information"
+                placeholder="Write your message here"
                 key={form.key("message")}
                 {...form.getInputProps("message")}
                 minRows={3}

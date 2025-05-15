@@ -10,7 +10,7 @@ export function Hero() {
     <Container size="md">
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>Hi! I'm Sydney 💾</Title>
+          <Title className={classes.title}>Hi! I&apos;m Sydney 💾</Title>
           <Text mt="md">A Software Developer based in Halifax, Canada</Text>
 
           <Group mt={30}>
