@@ -9,11 +9,25 @@ import {
   Textarea,
   TextInput,
 } from "@mantine/core";
+import { useForm } from "@mantine/form";
 // import bg from "./bg.svg";
 import { ContactIconsList } from "../ContactIcons/ContactIcons";
 import classes from "./GetInTouch.module.css";
 
 export function GetInTouch() {
+  const form = useForm({
+    mode: "uncontrolled",
+    initialValues: { name: "", email: "", subject: "", message: "" },
+
+    validate: {
+      name: (value) =>
+        value.length < 2 ? "Name must have at least 2 letters" : null,
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+      subject: (value) => (value.length < 1 ? "Subject cannot be empty" : null),
+      message: (value) => (value.length < 1 ? "Message cannot be empty" : null),
+    },
+  });
+
   return (
     <Container size="lg" py="xl" id="contact">
       <Paper shadow="md" radius="lg">
@@ -28,7 +42,8 @@ export function GetInTouch() {
 
           <form
             className={classes.form}
-            onSubmit={(event) => event.preventDefault()}
+            // onSubmit={(event) => event.preventDefault()}
+            onSubmit={form.onSubmit(console.log)}
           >
             <Text fz="lg" fw={700} className={classes.title}>
               Get in touch
@@ -36,11 +51,17 @@ export function GetInTouch() {
 
             <div className={classes.fields}>
               <SimpleGrid cols={{ base: 1, sm: 2 }}>
-                <TextInput label="Your name" placeholder="Your name" />
+                <TextInput
+                  label="Your name"
+                  placeholder="Your name"
+                  key={form.key("name")}
+                  {...form.getInputProps("name")}
+                />
                 <TextInput
                   label="Your email"
                   placeholder="hello@example.com"
-                  required
+                  key={form.key("email")}
+                  {...form.getInputProps("email")}
                 />
               </SimpleGrid>
 
@@ -48,13 +69,16 @@ export function GetInTouch() {
                 mt="md"
                 label="Subject"
                 placeholder="Subject"
-                required
+                key={form.key("subject")}
+                {...form.getInputProps("subject")}
               />
 
               <Textarea
                 mt="md"
                 label="Your message"
                 placeholder="Please include all relevant information"
+                key={form.key("message")}
+                {...form.getInputProps("message")}
                 minRows={3}
               />
 
