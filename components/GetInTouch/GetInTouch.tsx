@@ -67,7 +67,7 @@ export function GetInTouch() {
                 />
                 <TextInput
                   label="Your email"
-                  placeholder="your_email@example.com"
+                  placeholder="email@example.com"
                   key={form.key("email")}
                   {...form.getInputProps("email")}
                 />
