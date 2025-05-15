@@ -13,6 +13,14 @@ import { useForm } from "@mantine/form";
 // import bg from "./bg.svg";
 import { ContactIconsList } from "../ContactIcons/ContactIcons";
 import classes from "./GetInTouch.module.css";
+import { sendEmail } from "../../utils/sendEmail";
+
+export type FormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 export function GetInTouch() {
   const form = useForm({
@@ -43,7 +51,7 @@ export function GetInTouch() {
           <form
             className={classes.form}
             // onSubmit={(event) => event.preventDefault()}
-            onSubmit={form.onSubmit(console.log)}
+            onSubmit={form.onSubmit((values: FormData) => sendEmail(values))}
           >
             <Text fz="lg" fw={700} className={classes.title}>
               Get in touch
@@ -59,7 +67,7 @@ export function GetInTouch() {
                 />
                 <TextInput
                   label="Your email"
-                  placeholder="hello@example.com"
+                  placeholder="your_email@example.com"
                   key={form.key("email")}
                   {...form.getInputProps("email")}
                 />

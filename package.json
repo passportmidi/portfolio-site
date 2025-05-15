@@ -15,8 +15,10 @@
     "@mantinex/mantine-logo": "^2.0.0",
     "@tabler/icons": "^3.31.0",
     "@tabler/icons-react": "^3.31.0",
+    "@types/nodemailer": "^6.4.17",
     "dayjs": "^1.11.13",
     "next": "15.2.3",
+    "nodemailer": "^7.0.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "rss-parser": "^3.13.0"
