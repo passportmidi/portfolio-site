@@ -20,6 +20,15 @@ import { useRouter } from "next/navigation";
 
 const data = [
   {
+    image: "/portfolio.png",
+    title: "Portfolio website",
+    description:
+      "Built using the Mantine component library and Nodemailer for the contact form.",
+    code: "https://github.com/passportmidi/portfolio-site",
+    link: "https://www.putnam.computer/",
+    badges: ["React", "Next.js", "TypeScript", "Mantine UI", "Nodemailer"],
+  },
+  {
     image: "/wizard.png",
     title: "RecipeWizard",
     description:
@@ -95,7 +104,7 @@ export function Projects() {
         />
       </Card.Section>
 
-      <Card.Section className={classes.section} mt="md">
+      <Card.Section className={classes.section} mt="md" flex={1}>
         <Group justify="apart">
           <Text fz="lg" fw={500} ff="heading">
             {project.title}
@@ -136,7 +145,7 @@ export function Projects() {
           style={{ flex: 1 }}
           onClick={() => router.push(`${project.code}`)}
         >
-          Source code
+          Code
         </Button>
       </Group>
     </Card>
