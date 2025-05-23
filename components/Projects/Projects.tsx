@@ -35,6 +35,30 @@ const data = [
       "Knex",
     ],
   },
+  {
+    image: "/snaps.png",
+    title: "BrainStation Photo Gallery",
+    description:
+      "A photo gallery website built for BrainStation. Includes tag filtering and pages for each individual photo with likes and comments. Grabs photo data from a backend API built in Node.js.",
+    link: "https://github.com/passportmidi/bstn-photo-gallery",
+    badges: ["HTML", "CSS", "Sass", "JavaScript", "Node.js", "REST API"],
+  },
+  {
+    image: "/band.png",
+    title: "BrainStation Band Website",
+    description:
+      "Responsive website for a band built for BrainStation. Grabs comments and show dates from an external API.",
+    link: "https://github.com/passportmidi/bstn-band-website",
+    badges: ["HTML", "CSS", "Sass", "JavaScript", "Axios", "REST API"],
+  },
+  {
+    image: "/cafe.png",
+    title: "BrainStation Café Website",
+    description:
+      "Responsive café website built for BrainStation. Includes about and menu pages.",
+    link: "https://github.com/passportmidi/bstn-cafe",
+    badges: ["HTML", "CSS", "Sass", "JavaScript"],
+  },
 ];
 
 export function Projects() {
