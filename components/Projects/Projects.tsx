@@ -1,6 +1,6 @@
 "use client";
 
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconCode, IconExternalLink } from "@tabler/icons-react";
 import {
   Badge,
   Button,
@@ -24,7 +24,7 @@ const data = [
     title: "RecipeWizard",
     description:
       "An application that allows bakers to convert between cups and grams quickly and easily when measuring ingredients.",
-    link: "https://github.com/passportmidi/capstone-project-frontend",
+    code: "https://github.com/passportmidi/capstone-project-frontend",
     badges: [
       "React",
       "Node.js",
@@ -39,16 +39,26 @@ const data = [
     image: "/snaps.png",
     title: "BrainStation Photo Gallery",
     description:
-      "A photo gallery website built for BrainStation. Includes tag filtering and pages for each individual photo with likes and comments. Grabs photo data from a backend API built in Node.js.",
-    link: "https://github.com/passportmidi/bstn-photo-gallery",
-    badges: ["HTML", "CSS", "Sass", "JavaScript", "Node.js", "REST API"],
+      "A photo gallery website with backend API built for BrainStation. Includes tag filtering and pages for each individual photo with likes and comments.",
+    code: "https://github.com/passportmidi/bstn-photo-gallery",
+    link: "https://bstn-photo-gallery.vercel.app/",
+    badges: [
+      "HTML",
+      "CSS",
+      "Sass",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "REST API",
+    ],
   },
   {
     image: "/band.png",
     title: "BrainStation Band Website",
     description:
       "Responsive website for a band built for BrainStation. Grabs comments and show dates from an external API.",
-    link: "https://github.com/passportmidi/bstn-band-website",
+    code: "https://github.com/passportmidi/bstn-band-website",
+    link: "https://bstn-band-website.vercel.app/",
     badges: ["HTML", "CSS", "Sass", "JavaScript", "Axios", "REST API"],
   },
   {
@@ -56,7 +66,8 @@ const data = [
     title: "BrainStation Café Website",
     description:
       "Responsive café website built for BrainStation. Includes about and menu pages.",
-    link: "https://github.com/passportmidi/bstn-cafe",
+    code: "https://github.com/passportmidi/bstn-cafe",
+    link: "https://bstn-cafe.vercel.app/",
     badges: ["HTML", "CSS", "Sass", "JavaScript"],
   },
 ];
@@ -109,13 +120,23 @@ export function Projects() {
       </Card.Section>
 
       <Group mt="xs">
+        {project.link && (
+          <Button
+            radius="md"
+            rightSection={<IconExternalLink size={18} stroke={1.5} />}
+            style={{ flex: 1 }}
+            onClick={() => router.push(`${project.link}`)}
+          >
+            Website
+          </Button>
+        )}
         <Button
           radius="md"
-          rightSection={<IconBrandGithub size={18} stroke={1.5} />}
+          rightSection={<IconCode size={18} stroke={1.5} />}
           style={{ flex: 1 }}
-          onClick={() => router.push(`${project.link}`)}
+          onClick={() => router.push(`${project.code}`)}
         >
-          View on GitHub
+          Source code
         </Button>
       </Group>
     </Card>
