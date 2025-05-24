@@ -1,22 +1,19 @@
 "use client";
 
-import { IconCode, IconExternalLink } from "@tabler/icons-react";
 import {
   Badge,
   Button,
   Card,
-  Container,
   Group,
   Image,
-  SimpleGrid,
   Text,
-  Title,
   useMantineTheme,
 } from "@mantine/core";
-import { CardGrid } from "../CardGrid/CardGrid";
+import { IconCode, IconExternalLink } from "@tabler/icons-react";
 import NextImage from "next/image";
-import classes from "./Projects.module.css";
 import { useRouter } from "next/navigation";
+import { CardGrid } from "../CardGrid/CardGrid";
+import classes from "./Projects.module.css";
 
 const data = [
   {
@@ -82,7 +79,6 @@ const data = [
 ];
 
 export function Projects() {
-  const theme = useMantineTheme();
   const router = useRouter();
 
   const projects = data.map((project) => (

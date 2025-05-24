@@ -1,25 +1,19 @@
 "use client";
 
-import { IconBookmark, IconHeart, IconShare } from "@tabler/icons-react";
 import {
-  ActionIcon,
-  Avatar,
-  Badge,
   Button,
   Card,
   Center,
   Group,
-  Image,
   Text,
-  Title,
   useMantineTheme,
 } from "@mantine/core";
-import { CardGrid } from "../CardGrid/CardGrid";
-import { useRouter } from "next/navigation";
-import classes from "./Blog.module.css";
-import { useState, useEffect } from "react";
-import Parser from "rss-parser";
 import dayjs from "dayjs";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import Parser from "rss-parser";
+import { CardGrid } from "../CardGrid/CardGrid";
+import classes from "./Blog.module.css";
 
 export function Blog() {
   const theme = useMantineTheme();

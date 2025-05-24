@@ -10,7 +10,6 @@ import {
   TextInput,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
-// import bg from "./bg.svg";
 import { ContactIconsList } from "../ContactIcons/ContactIcons";
 import classes from "./GetInTouch.module.css";
 import { sendEmail } from "../../utils/sendEmail";
