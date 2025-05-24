@@ -30,9 +30,7 @@ export function Blog() {
 
   useEffect(() => {
     const loadArticles = async () => {
-      const feed = await parser.parseURL(
-        "https://blog.putnam.computer/index.xml"
-      );
+      const feed = await parser.parseURL("/api/blog");
       setArticles(feed);
     };
 
